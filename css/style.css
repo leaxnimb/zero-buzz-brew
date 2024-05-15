@@ -1,4 +1,186 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
+
+body{
+    font-family: sans-serif; /* skift font */
+}
+
+/* styling af navbar */
+nav{
+    background-color: #0077ffb2;
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+label.logo{
+    color: white;
+    font-size: 35px; /* størrelsen */
+    font-weight: bold;
+    margin: 0 2rem;
+}
+
+/* flexbox */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+ul.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+nav ul li{
+    margin: 0 2rem;
+}
+
+nav ul li a{
+    color: white;
+    text-transform: uppercase;
+}
+
+a.active {
+    padding-left: 5rem;
+}
+
+a.active:hover
+ {
+  text-decoration: underline;
+}
+
+
+
+/* burgerbar */
+
+/* styling the input tag  */
+#check {
+    display: none;
+  }
+  
+ 
+  /* styling the label checkbtn class - display none*/
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  
+
+  /* Her gøre jeg navbaren til flex-box ved alle skærmstørrelser over tablet */
+  @media (min-width: 858px) {
+    nav{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .menu{
+      display:flex;
+    }
+  
+    label.logo{
+      display: flex;
+    
+    }
+    
+  
+  }
+  
+  
+  
+  /* Step 16 */
+  /* adding CSS Media Queries - break-point 925px max*/
+  
+  @media (max-width: 925px){
+  
+    label.logo {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    
+    nav ul li a {
+      font-size: 16px;
+    }
+  
+    h1 {
+      padding-top: 20px;
+    }
+  }  
+  
+  /* Step 21 */
+  /* updating CSS Media Queries - break-point 858px max*/
+  /* updating selector - nav ul li */
+  /* addding new properties - margin and line-height */
+  
+  @media (max-width: 858px){
+    nav{
+        background-color: #0077ffb2;
+        height: 3rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .checkbtn {
+      display: block;
+    }
+  
+    h1 {
+      padding-top: 20px;
+    }
+  
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #0077ffb2;
+      top: 3rem;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      }
+
+      ul.menu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+  
+      nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+      }
+  
+      nav ul li a {
+      font-size: 20px;
+      }
+  
+      a:hover,
+      a.active {
+      background: none;
+      color: white;
+      }
+  
+      #check:checked ~ ul {
+      left: 0;
+      }
+  }
