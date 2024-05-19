@@ -19,10 +19,8 @@ nav{
     justify-content: space-between
 }
 
-label.logo{
-    color: white;
-    font-size: 35px; /* størrelsen */
-    font-weight: bold;
+label.logo img{
+    width: 3rem;
     margin: 0 2rem;
 }
 
@@ -97,7 +95,13 @@ a.active:hover
     
     }
     
-  
+  }
+
+
+  /* Her styler jeg front-pic */
+  .frontpic{
+    width: 100%;
+    position: absolute;
   }
   
   
