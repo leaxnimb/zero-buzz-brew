@@ -6,6 +6,22 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'DoubleBassBold';
+  src: url(../font/DoubleBass-Bold-trial.ttf);
+} 
+
+@font-face {
+  font-family: 'DoubleBassRegular';
+  src: url(../font/DoubleBass-Regular-trial.ttf);
+}
+
+@font-face {
+  font-family: DoubleBassThin;
+  src: url(../font/DoubleBass-Light-trial.ttf);
+}
+
+
 body{
     font-family: sans-serif; /* skift font */
 }
@@ -39,6 +55,8 @@ ul.menu {
 
 nav ul li{
     margin: 0 2rem;
+    font-family: DoubleBassThin;
+    letter-spacing: 0.2rem;
 }
 
 nav ul li a{
@@ -47,14 +65,13 @@ nav ul li a{
 }
 
 a.active {
-    padding-left: 5rem;
+    padding-left: 3rem;
 }
 
 a.active:hover
  {
   text-decoration: underline;
 }
-
 
 
 /* burgerbar */
@@ -98,14 +115,96 @@ a.active:hover
   }
 
 
-  /* Her styler jeg front-pic */
+  /* Front-pic style*/
   .frontpic{
     width: 100%;
-    position: absolute;
   }
   
+
+  /* Article styles med flexbox */
   
-  
+  article.foerste{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  article h1{
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    font-family: DoubleBassBold;
+  }
+
+  article p{
+    line-height: 2rem;
+  }
+
+  /* stilyng af tre nedre sections */
+
+  section {
+    display: flex;
+    padding: 3rem;
+  }
+
+  .glas{
+    width: 100%;
+  }
+
+  .smag{
+    width: 100%;
+  }
+
+  /* section 2, p, givet ekstra padding så knap matcher up (potentielt ændres) */
+  div .p{
+    padding-bottom: 2rem;
+  }
+
+  .event{
+    width: 100%;
+  }
+
+  section article{
+    margin: 2rem;
+    background-color: #0077ff4e;
+  }
+
+  section article .tekstpad {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* tekst styling */
+  section article h2{
+    font-family: DoubleBassThin
+  }
+
+  /* styling af knapper */
+  .btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  button.læsM{
+    background-color: #0077ff4e;
+    border-color: white;
+    font-family: DoubleBassThin;
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    margin: 2rem;
+    border-radius: 5px;
+    padding: 1rem;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
   /* Step 16 */
   /* adding CSS Media Queries - break-point 925px max*/
   
@@ -172,6 +271,7 @@ a.active:hover
       display: block;
       margin: 50px 0;
       line-height: 30px;
+      font-family: ;
       }
   
       nav ul li a {
@@ -186,5 +286,11 @@ a.active:hover
   
       #check:checked ~ ul {
       left: 0;
+      }
+
+      .treatikler{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
       }
   }
