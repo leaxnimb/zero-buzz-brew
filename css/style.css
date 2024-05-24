@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* font */
 @font-face {
   font-family: 'DoubleBassBold';
   src: url(../font/DoubleBass-Bold-trial.ttf);
@@ -22,11 +23,13 @@
 }
 
 
+
+
 body{
-    font-family: sans-serif; /* skift font */
+    font-family: sans-serif; /* skift evt font */
 }
 
-/* styling af navbar */
+/* NAVBAR */
 nav{
     background-color: #0077ffb2;
     height: 3rem;
@@ -94,26 +97,32 @@ a.active:hover
   }
   
 
-  /* Her gøre jeg navbaren til flex-box ved alle skærmstørrelser over tablet */
-  @media (min-width: 858px) {
-    nav{
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .menu{
-      display:flex;
-    }
-  
-    label.logo{
-      display: flex;
-    
-    }
-    
-  }
 
+/* FOOTER */
+footer{
+  background-color: #0077ffb2;
+}
+
+footer section{
+  display: flex;
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+footer section ul li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-top: 1rem;
+  font-family: sans-serif;
+}
+
+
+/* INDEX.html styling */
 
   /* Front-pic style*/
   .frontpic{
@@ -145,9 +154,10 @@ a.active:hover
 
   /* stilyng af tre nedre sections */
 
-  section {
+  section.treatikler{
     display: flex;
     padding: 3rem;
+    padding-bottom: 7rem;
   }
 
   .glas{
@@ -167,12 +177,12 @@ a.active:hover
     width: 100%;
   }
 
-  section article{
+  section article.kolonner{
     margin: 2rem;
     background-color: #0077ff4e;
   }
 
-  section article .tekstpad {
+ /*  section article  */.tekstpad {
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -190,19 +200,158 @@ a.active:hover
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
+    text-decoration:none;
+  }
+
+   /* så knappen forbliver sort */
+   .btn a{
+    color: black;
   }
 
   button.læsM{
     background-color: #0077ff4e;
     border-color: white;
+    border-style:solid;
     font-family: DoubleBassThin;
     font-size: 16px;
     letter-spacing: 0.1rem;
     margin: 2rem;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 1rem;
     padding-left: 7%;
     padding-right: 7%;
+  }
+
+  .læsM:hover{
+    background-color: white;
+    border-color: #0077ff8f;
+    border-style: groove;
+  }
+
+
+
+/* PRODUKTSORTIMENT */
+
+  article.oeverst{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-bottom: 7rem;
+  }
+
+  article.produktstmnt{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .oel{
+    width: 100%;
+  }
+
+  section.artikl{
+    background-color: #0077ff4e;
+    padding-bottom: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  article#nederst {
+    margin-bottom: 4rem;
+  }
+
+  section.artikl h2{
+    display: flex;
+    justify-content: center;
+    font-family: DoubleBassThin;
+  }
+
+ 
+
+/* PRODUKT.html */
+
+article.prdkt {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  align-items: center;
+  margin-bottom: 15rem;
+}
+
+.prdkt h2{
+  font-family: DoubleBassThin
+}
+
+.mangop{
+  display: flex;
+  justify-content: center;
+}
+
+.mangop img{
+  width: 70%;
+}
+
+.bt button{
+  background-color: #0077ff4e;
+  border-color: white;
+  border-style:solid;
+  font-family: DoubleBassThin;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  border-radius: 2px;
+  margin-top: 2rem;
+  padding: 1rem;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.bt button:hover{
+  border-color: #861ca16f;
+  background-color: white;
+}
+
+
+/* OM OS */
+
+.pics{
+  display: flex;
+}
+
+.pics img{
+  width: 100%;
+  padding: 2rem;
+}
+
+.leftpic{
+  padding-left: 3rem;
+}
+
+.rightpic{
+  padding-right: 3rem;
+}
+
+   /* Her gøre jeg navbaren til flex-box ved alle skærmstørrelser over tablet */
+   @media (min-width: 858px) {
+    nav{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .menu{
+      display:flex;
+    }
+  
+    label.logo{
+      display: flex;
+    
+    }
+    
   }
 
   /* Step 16 */
@@ -230,6 +379,8 @@ a.active:hover
   /* addding new properties - margin and line-height */
   
   @media (max-width: 858px){
+
+    /* NAVBAR */
     nav{
         background-color: #0077ffb2;
         height: 3rem;
@@ -271,7 +422,6 @@ a.active:hover
       display: block;
       margin: 50px 0;
       line-height: 30px;
-      font-family: ;
       }
   
       nav ul li a {
@@ -288,9 +438,43 @@ a.active:hover
       left: 0;
       }
 
+
+      /* FOOTER */
+      footer section{
+        display: flex;
+        padding-top: 4rem;
+        flex-direction: column;
+      }
+
+      /* INDEX.html */
+
       .treatikler{
         display: flex;
         flex-direction: column;
         margin-top: 3rem;
       }
+
+      /* PRODUKTSORTIMENT.html */
+      article.produktstmnt{
+        display: flex;
+        flex-direction: column;
+      }
+
+
+      /* OM OS */
+      .pics{
+        display: flex;
+        flex-direction: column;}
+
+        .leftpic{
+          padding-right: 3rem;
+        }
+        
+        .rightpic{
+          padding-left: 3rem;
+        }
+
+        h1.vh{
+          padding-left: 3rem;
+        }
   }
