@@ -31,51 +31,43 @@ body{
 
 /* NAVBAR */
 nav{
-    background-color: #0077ffb2;
-    height: 3rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between
+  background-color: #0077ffb2;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between
 }
-
 label.logo img{
-    width: 3rem;
-    margin: 0 2rem;
+  width: 3rem;
+  margin: 0 2rem;
 }
-
 /* flexbox */
 .menu {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-
 ul.menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-
 nav ul li{
-    margin: 0 2rem;
-    font-family: DoubleBassThin;
-    letter-spacing: 0.2rem;
+  margin: 0 2rem;
+  font-family: DoubleBassThin;
+  letter-spacing: 0.2rem;
 }
-
 nav ul li a{
-    color: white;
-    text-transform: uppercase;
+  color: white;
+  text-transform: uppercase;
 }
-
 a.active {
-    padding-left: 3rem;
+  padding-left: 3rem;
 }
-
 a.active:hover
- {
-  text-decoration: underline;
+{
+text-decoration: underline;
 }
-
 
 /* burgerbar */
 
@@ -443,9 +435,10 @@ article.prdkt {
       footer section{
         display: flex;
         padding-top: 4rem;
-        flex-direction: column;
+        flex-direction: row;
       }
 
+      
       /* INDEX.html */
 
       .treatikler{
