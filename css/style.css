@@ -205,9 +205,6 @@ main{
    /* så knappen forbliver sort */
    .btn a{
     color: black;
-  }
-
-  button.læsM{
     background-color: #0077ff4e;
     border-color: white;
     border-style:solid;
@@ -287,13 +284,17 @@ article.prdkt {
   font-family: DoubleBassThin
 }
 
+ul.nindhold{
+  line-height: 2rem;
+}
+
 .mangop{
   display: flex;
   justify-content: center;
 }
 
 .mangop img{
-  width: 60%;
+  width: 60.5%;
 }
 
 .bt button{
@@ -320,6 +321,10 @@ article.prdkt {
 
 .pics{
   display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 .pics img{
@@ -329,11 +334,11 @@ article.prdkt {
 }
 
 .leftpic{
-  padding-left: 3rem;
+  padding-left: 6rem;
 }
 
 .rightpic{
-  padding-right: 3rem;
+  padding-right: 6rem;
 }
 
    /* Her gøre jeg navbaren til flex-box ved alle skærmstørrelser over tablet */
@@ -463,6 +468,14 @@ article.prdkt {
         flex-direction: column;
       }
 
+      /* PRODUKT */
+      article.prdkt {
+        display: flex;
+        flex-direction: column;
+      }
+      article h1 {
+        padding-left: 6rem;
+      }
 
       /* OM OS */
       .pics{
